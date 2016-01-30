@@ -122,11 +122,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 85846735}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15c20365fa1110b4f99467afc0a7b969, type: 3}
+  m_Script: {fileID: 11500000, guid: 69801afe2e24a1146be7bbc32d0a86a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lod: 7
-  eyeDepthBaker: {fileID: 4800000, guid: 0fe3bdaa7039e31459d6324d29c1f01a, type: 3}
+  eyeDepthBaker: {fileID: 4800000, guid: 3cdd74b6cccd6a746be64c86a0c9fe4c, type: 3}
   target: {fileID: 1455416225}
 --- !u!20 &85846738
 Camera:
@@ -247,12 +247,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 810832562}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20d8978ae5b946b4da56e0322fb906f5, type: 3}
+  m_Script: {fileID: 11500000, guid: 7013fddd94e071f4c84b178996ba7c85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fab: {fileID: 167790, guid: 9648e80547b2a3241a5fd91a1d816a5f, type: 2}
+  fab: {fileID: 167790, guid: 4ad2fbae133e74b43bf75afa47d1dcb1, type: 2}
   scale: 20
-  freq: 0.05
+  freq: 0.01
   count: 100
 --- !u!4 &810832564
 Transform:
@@ -293,7 +293,7 @@ MeshRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_Materials:
-  - {fileID: 2100000, guid: c2ab8e6db502c464f933c038e3209ec6, type: 2}
+  - {fileID: 2100000, guid: bd722e895d0a2694ba56ed1314338f34, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0

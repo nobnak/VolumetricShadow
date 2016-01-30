@@ -70,7 +70,7 @@ public class ShadowVolume : MonoBehaviour {
 	}
 
 	void UpdateMesh(Mesh mesh, int size) {
-		var vertexCount = size * size;
+		var vertexCount = size * size + 1;
 		var vertices = new Vector3[vertexCount];
 		var uv = new Vector2[vertexCount];
 		var dx = 2f / size;
@@ -79,14 +79,18 @@ public class ShadowVolume : MonoBehaviour {
 		for (var vy = 0; vy < size; vy++) {
 			for (var vx = 0; vx < size; vx++) {
 				var i = vx + size * vy;
-				vertices[i] = new Vector3(dx * vx + offsetx, dx * vy + offsetx, 0f);
+				vertices[i] = new Vector3(dx * vx + offsetx, dx * vy + offsetx, 1f);
 				uv[i] = new Vector2(duv * vx, duv * vy);
 			}
 		}
+		var lastVertex = vertexCount - 1;
+		vertices [lastVertex] = new Vector3 (0f, 0f, 0f);
+		uv [lastVertex] = new Vector2 (0.5f, 0.5f);
 
 		var ti = 0;
 		var edgeCount = size - 1;
-		var triangleCount = 6 * edgeCount * edgeCount;
+		var sideTriangleCount = 12 * edgeCount;
+		var triangleCount = 6 * edgeCount * edgeCount + sideTriangleCount;
 		var triangles = new int[triangleCount];
 		for (var ey = 0; ey < edgeCount; ey++) {
 			for (var ex = 0; ex < edgeCount; ex++) {
@@ -98,6 +102,11 @@ public class ShadowVolume : MonoBehaviour {
 				triangles[ti++] = vi + size;
 				triangles[ti++] = vi + size + 1;
 			}
+		}
+
+		var triangleOffset = triangleCount - sideTriangleCount;
+		for (var i = 0; i < edgeCount; i++) {
+			
 		}
 
 		mesh.Clear();
