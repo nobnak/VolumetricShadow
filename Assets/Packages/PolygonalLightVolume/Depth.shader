@@ -1,12 +1,13 @@
 ﻿Shader "Unlit/Depth" {
 	Properties {
 		_MainTex ("Texture", 2D) = "white" {}
-		_ColorFront ("Front Color", Color) = (1,1,1,1)
-		_ColorBack ("Back Color", Color) = (1,1,1,1)
+		_Color ("Color", Color) = (1,1,1,1)
+		_ColorSub ("Sub Color", Color) = (1,1,1,1)
 	}
 	SubShader {
 		Tags { "RenderType"="Transparent" "Queue"="Transparent" }
 		//Tags { "RenderType"="Opaque" }
+		ColorMask RGB
 
 		CGINCLUDE
 		#pragma target 5.0
@@ -28,8 +29,8 @@
 
 		sampler2D _MainTex;
 		float4 _MainTex_ST;
-		float4 _ColorFront;
-		float4 _ColorBack;
+		float4 _Color;
+		float4 _ColorSub;
 		float4x4 _NDCEyeMat;
 		float4x4 _ShadowCamToWorldMat;
 
@@ -49,21 +50,21 @@
 			return o;
 		}
 		
-		fixed4 frag (v2f i, float face : VFACE) : SV_Target {
-			float ze = tex2D(_MainTex, i.uv).r;
-			float z01 = mul(_NDCEyeMat, float4(0, 0, ze, 1)).w;
-			return face >= 0 ? _ColorFront : _ColorBack;
-		}
 		ENDCG
 
 		Pass {
-			Cull Off
-			ZTest Always ZWrite Off
-			Blend SrcAlpha OneMinusSrcAlpha
+			Cull Front
+			ZTest LEqual ZWrite Off
+			Blend SrcAlpha One
+			BlendOp RevSub
 
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
+
+			fixed4 frag (v2f i) : SV_Target {
+				return _Color;
+			}
 			ENDCG
 		}
 	}

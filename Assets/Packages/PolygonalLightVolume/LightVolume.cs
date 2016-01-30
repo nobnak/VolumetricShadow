@@ -22,7 +22,7 @@ namespace PolygonalLightVolume {
 
 		void Start () {
 			_cam = GetComponent<Camera>();
-			_cam.depthTextureMode = DepthTextureMode.Depth;
+			//_cam.depthTextureMode = DepthTextureMode.Depth;
 
 			_eyeDepthBakerMat = new Material(eyeDepthBaker);
 

@@ -135,7 +135,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+        second: {r: 0.584, g: 0.584, b: 0.584, a: 0.11}
       data:
         first:
           name: _ColorFront
@@ -143,4 +143,8 @@ Material:
       data:
         first:
           name: _ColorBack
-        second: {r: 0.34091198, g: 0.572, b: 0, a: 0.191}
+        second: {r: 0.528, g: 0.528, b: 0.528, a: 0.104}
+      data:
+        first:
+          name: _ColorSub
+        second: {r: 1, g: 1, b: 1, a: 0.259}
