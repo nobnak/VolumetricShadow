@@ -30,11 +30,11 @@
 			}
 			
 			sampler2D _MainTex;
-			float4x4 _NDCEyeMat;
+			float4x4 _LightVolumeMat;
 
 			fixed4 frag (v2f i) : SV_Target {
 				float zn = tex2D(_MainTex, i.uv).r;
-				float ze = 1.0 / mul(_NDCEyeMat, float4(0, 0, zn, 1)).z;
+				float ze = 1.0 / mul(_LightVolumeMat, float4(0, 0, zn, 1)).z;
 				return ze;
 			}
 			ENDCG

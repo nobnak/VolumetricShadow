@@ -6,7 +6,7 @@ namespace PolygonalLightVolume {
 	[RequireComponent(typeof(Camera))]
 	public class LightVolume : MonoBehaviour {
 		public const string PROP_SHADOW_CAM_2_WORLD_MAT = "_ShadowCamToWorldMat";
-		public const string PROP_NDC_EYE_MAT = "_NDCEyeMat";
+		public const string PROP_LIGHT_VOLUME_MAT = "_LightVolumeMat";
 		public const string PROP_DEPTH_TEX = "_DepthTex";
 
 		public int lod = 10;
@@ -47,7 +47,7 @@ namespace PolygonalLightVolume {
 
 			_ndcEyeMat = UpdateMatrix();
 			lightVolumeMat.mainTexture = _eyeDepthTex;
-			Shader.SetGlobalMatrix(PROP_NDC_EYE_MAT, _ndcEyeMat);
+			Shader.SetGlobalMatrix(PROP_LIGHT_VOLUME_MAT, _ndcEyeMat);
 			Shader.SetGlobalMatrix(PROP_SHADOW_CAM_2_WORLD_MAT, transform.localToWorldMatrix);
 		}
 		void OnPostRender() {

@@ -1,9 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Depth.shader">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Packages\PolygonalLightVolume\Depth.shader">
     <Files>
-      <File FileName="Assets\LightVolume.cs" Line="43" Column="32" />
-      <File FileName="Assets\Depth.shader" Line="1" Column="1" />
+      <File FileName="Assets\Packages\PolygonalLightVolume\Depth.shader" Line="59" Column="18" />
+      <File FileName="Assets\Packages\PolygonalLightVolume\LightVolume.cs" Line="25" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
