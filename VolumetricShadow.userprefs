@@ -1,9 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Packages\PolygonalLightVolume\Depth.shader">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Packages\PolygonalLightVolume\LightCapture.cs">
     <Files>
-      <File FileName="Assets\Packages\PolygonalLightVolume\Depth.shader" Line="59" Column="18" />
-      <File FileName="Assets\Packages\PolygonalLightVolume\LightVolume.cs" Line="25" Column="6" />
+      <File FileName="Assets\Packages\PolygonalLightVolume\LightCapture.cs" Line="10" Column="47" />
+      <File FileName="Assets\Packages\PolygonalLightVolume\LightCapture.shader" Line="40" Column="13" />
+      <File FileName="..\..\..\Download\builtin_shaders-5.3.0f4\CGIncludes\UnityCG.cginc" Line="597" Column="60" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

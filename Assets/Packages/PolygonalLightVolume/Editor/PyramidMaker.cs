@@ -5,7 +5,7 @@ using System.IO;
 
 public class PyramidMaker : EditorWindow {
 	int lod = 9;
-	string directoryname = @"Assets\Models\Pyramids";
+	string directoryname = @"Assets\Packages\PolygonalLightVolume\Models\Pyramids";
 
 	[MenuItem("Window/Pyramid Maker")]
 	static void Init() {
