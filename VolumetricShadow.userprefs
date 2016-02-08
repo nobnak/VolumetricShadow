@@ -1,10 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Packages\PolygonalLightVolume\LightCapture.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Packages\PolygonalLightVolume\Examples\Toho.shader">
     <Files>
-      <File FileName="Assets\Packages\PolygonalLightVolume\LightCapture.cs" Line="43" Column="1" />
-      <File FileName="Assets\Packages\PolygonalLightVolume\LightCapture.shader" Line="1" Column="20" />
-      <File FileName="..\..\..\Download\builtin_shaders-5.3.0f4\CGIncludes\UnityCG.cginc" Line="1" Column="1" />
+      <File FileName="Assets\Packages\PolygonalLightVolume\Examples\Toho.shader" Line="33" Column="1" />
+      <File FileName="..\..\..\Download\builtin_shaders-5.3.0f4\DefaultResourcesExtra\Unlit\Unlit-AlphaTest.shader" Line="11" Column="12" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
