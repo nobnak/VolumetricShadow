@@ -130,7 +130,7 @@ Material:
       data:
         first:
           name: _Gain
-        second: 0.005
+        second: 0.008
       data:
         first:
           name: _GainSub
@@ -143,7 +143,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
+        second: {r: 1, g: 0.99525774, b: 0.89690715, a: 1}
       data:
         first:
           name: _ColorFront
