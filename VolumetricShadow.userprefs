@@ -1,12 +1,6 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Packages\PolygonalLightVolume\Airlight.shader">
-    <Files>
-      <File FileName="Assets\Packages\PolygonalLightVolume\Depth.shader" Line="26" Column="20" />
-      <File FileName="Assets\Packages\PolygonalLightVolume\CameraSetting.cs" Line="15" Column="55" />
-      <File FileName="Assets\Packages\PolygonalLightVolume\Airlight.shader" Line="59" Column="34" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
