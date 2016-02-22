@@ -16,6 +16,7 @@ namespace PolygonalLightVolume {
         }
     	void Update () {
             _attachedCamera.hdr = true;
+			_attachedCamera.depthTextureMode = DepthTextureMode.Depth;
     	}
         void OnRenderImage(RenderTexture src, RenderTexture dst) {
             switch (debugMode) {

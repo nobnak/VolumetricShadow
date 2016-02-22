@@ -10,8 +10,6 @@
 		ColorMask RGB
 
 		CGINCLUDE
-// Upgrade NOTE: excluded shader from OpenGL ES 2.0 because it uses non-square matrices
-#pragma exclude_renderers gles
 		#pragma target 5.0
 
 		#include "UnityCG.cginc"
@@ -37,6 +35,8 @@
 		float4x4 _LightVolumeMat;
 		float4x4 _ShadowCamToWorldMat;
 
+		sampler2D _CameraDepthTexture;
+
 		v2f vert (appdata v) {
 			float2 uv = TRANSFORM_TEX(v.uv, _MainTex);
 
@@ -49,12 +49,16 @@
 
 			v2f o;
 			o.vertex = mul(UNITY_MATRIX_P, float4(eyePos, 1));
-			o.uv = uv;
+			o.uv = 0.5 * (o.vertex.xy / o.vertex.w + 1.0);
+			if (_ProjectionParams.x < 0)
+				o.uv.y = 1.0 - o.uv.y;
 			o.z = -eyePos.z;
 			return o;
 		}
 
 		float4 frag (v2f i) : SV_Target {
+			float depth = tex2D(_CameraDepthTexture, i.uv).x;
+			float zeye = LinearEyeDepth(depth);
 			float4 c = _Color;
 			return c * (_Gain * max(i.z, 0));
 		}
