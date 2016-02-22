@@ -23,7 +23,7 @@
 
 		struct v2f { 
 			float4 vertex : SV_POSITION;
-			float2 uv : TEXCOORD0;
+			noperspective float2 uv : TEXCOORD0;
 			float z : TEXCOORD1;
 		};
 
@@ -60,7 +60,7 @@
 			float depth = tex2D(_CameraDepthTexture, i.uv).x;
 			float zeye = LinearEyeDepth(depth);
 			float4 c = _Color;
-			return c * (_Gain * max(i.z, 0));
+			return c * (_Gain * clamp(i.z, 0, zeye));
 		}
 		ENDCG
 
