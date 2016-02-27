@@ -13,6 +13,7 @@
 		#pragma target 5.0
 
 		#include "UnityCG.cginc"
+		#include "Depth.cginc"
 
 		// vertex (NDC Coord) : (-1, -1, 0) -> (1, 1, 0)
 		// uv : (Depth Sampler) : (0, 0) -> (1, 1)
@@ -58,7 +59,7 @@
 
 		float4 frag (v2f i) : SV_Target {
 			float depth = tex2D(_CameraDepthTexture, i.uv).x;
-			float zeye = LinearEyeDepth(depth);
+			float zeye = Z2EyeDepth(depth);
 			float4 c = _Color;
 			return c * (_Gain * clamp(i.z, 0, zeye));
 		}

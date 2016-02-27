@@ -147,7 +147,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 200
+  far clip plane: 1000
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -156,7 +156,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294963199
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 884016139}
+  m_TargetTexture: {fileID: 317008638}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
@@ -164,6 +164,28 @@ Camera:
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
   m_StereoMirrorMode: 0
+--- !u!84 &317008638
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_Width: 512
+  m_Height: 512
+  m_AntiAliasing: 1
+  m_DepthFormat: 2
+  m_ColorFormat: 1
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_TextureSettings:
+    m_FilterMode: 1
+    m_Aniso: 0
+    m_MipBias: 0
+    m_WrapMode: 1
 --- !u!1 &344197738
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,28 +332,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2055108599}
   m_RootOrder: 1
---- !u!84 &884016139
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_Width: 512
-  m_Height: 512
-  m_AntiAliasing: 1
-  m_DepthFormat: 2
-  m_ColorFormat: 1
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 0
-    m_MipBias: 0
-    m_WrapMode: 1
 --- !u!4 &947021146 stripped
 Transform:
   m_PrefabParentObject: {fileID: 414630, guid: e8f75a21df1442f43b6945765210dd35, type: 2}
@@ -459,7 +459,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 40
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
