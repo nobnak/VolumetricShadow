@@ -10,6 +10,7 @@ Shader "Unlit/Depth" {
 		#pragma target 5.0
 
 		#include "UnityCG.cginc"
+            #include "Assets/Packages/PolygonalLightVolume/Materials/UV.cginc"
 
 		struct appdata {
 			float4 vertex : POSITION;
@@ -18,7 +19,7 @@ Shader "Unlit/Depth" {
 
 		struct v2f { 
 			float4 vertex : SV_POSITION;
-			float2 uv : TEXCOORD0;
+			float4 uv : TEXCOORD0;
 		};
 
 		float _Gain;
@@ -26,16 +27,14 @@ Shader "Unlit/Depth" {
         sampler2D _CameraDepthTexture;
 
 		v2f vert (appdata v) {
-			float2 uvFromBottm = v.uv;
-
 			v2f o;
 			o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
-			o.uv = uvFromBottm;
+			o.uv = float4(v.uv, UVAtBottom(v.uv));
 			return o;
 		}
 
 		float4 frag (v2f i) : SV_Target {
-            float zfar = LinearEyeDepth(tex2D(_CameraDepthTexture, i.uv).x);
+            float zfar = LinearEyeDepth(tex2D(_CameraDepthTexture, i.uv.zw).x);
             return zfar * _Gain;
 		}
 		ENDCG

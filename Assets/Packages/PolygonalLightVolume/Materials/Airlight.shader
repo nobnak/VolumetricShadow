@@ -13,6 +13,7 @@
 		#pragma target 5.0
 
 		#include "UnityCG.cginc"
+        #include "Assets/Packages/PolygonalLightVolume/Materials/UV.cginc"
 
 		// vertex (NDC Coord) : (-1, -1, 0) -> (1, 1, 0)
 		// uv : (Depth Sampler) : (0, 0) -> (1, 1)

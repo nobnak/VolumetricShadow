@@ -94,7 +94,7 @@ Material:
       data:
         first:
           name: _Gain
-        second: 0.002
+        second: 0.01
       data:
         first:
           name: _Parallax
