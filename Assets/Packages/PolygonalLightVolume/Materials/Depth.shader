@@ -10,7 +10,7 @@ Shader "Unlit/Depth" {
 		#pragma target 5.0
 
 		#include "UnityCG.cginc"
-            #include "Assets/Packages/PolygonalLightVolume/Materials/UV.cginc"
+        #include "Assets/Packages/PolygonalLightVolume/Materials/UV.cginc"
 
 		struct appdata {
 			float4 vertex : POSITION;
